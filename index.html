@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOCK BOTTOM — Cheap Watch Reviews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#161616;
+  --paper:#f4ead5;
+  --pop:#ff4d2e;
+  --pop2:#2962ff;
+  --gold:#ffc83d;
+  --green:#1fd47e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Bricolage Grotesque',sans-serif;
+  overflow-x:hidden;
+}
+::selection{background:var(--pop);color:#fff}
+
+/* dotted texture */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(var(--ink) 1px,transparent 1px);
+  background-size:22px 22px;opacity:.05;
+}
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* ---- HEADER ---- */
+header{padding:40px 0 10px}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.brand{font-family:'Archivo Black',sans-serif;font-size:clamp(36px,7vw,72px);line-height:.9;letter-spacing:-2px;text-transform:uppercase}
+.brand span{color:var(--pop)}
+.badge{
+  background:var(--ink);color:var(--paper);font-family:'Space Mono',monospace;font-weight:700;
+  padding:8px 14px;border-radius:40px;font-size:13px;transform:rotate(3deg);
+  border:3px solid var(--ink);white-space:nowrap;
+}
+.tag{font-family:'Space Mono',monospace;margin-top:18px;font-size:15px;max-width:560px}
+
+/* ---- HERO / FEATURED ---- */
+.hero{
+  margin:36px 0;background:var(--pop2);color:#fff;border:5px solid var(--ink);
+  border-radius:28px;padding:36px;box-shadow:10px 10px 0 var(--ink);
+  display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center;
+}
+.hero .lab{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;background:var(--gold);color:var(--ink);display:inline-block;padding:5px 12px;border-radius:30px;margin-bottom:14px}
+.hero h2{font-family:'Archivo Black',sans-serif;font-size:clamp(28px,4vw,46px);line-height:1;text-transform:uppercase;letter-spacing:-1px}
+.hero p{margin-top:14px;font-size:17px;max-width:46ch;opacity:.95}
+.hero .score-big{font-family:'Archivo Black',sans-serif;font-size:clamp(64px,12vw,120px);line-height:.85;text-align:center}
+.hero .stars-row{font-size:30px;text-align:center;color:var(--gold);letter-spacing:4px}
+.hero a.cta{display:inline-block;margin-top:20px;background:var(--ink);color:#fff;font-family:'Space Mono',monospace;font-weight:700;padding:13px 22px;border-radius:40px;text-decoration:none;transition:transform .15s}
+.hero a.cta:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--pop)}
+
+/* ---- GRID ---- */
+.section-h{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:24px;margin:48px 0 22px;display:flex;align-items:center;gap:14px}
+.section-h::after{content:"";flex:1;height:4px;background:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+.card{
+  background:var(--paper);border:4px solid var(--ink);border-radius:22px;overflow:hidden;
+  text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--ink)}
+.card .thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:64px;border-bottom:4px solid var(--ink);overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.card .thumb.placeholder{background:var(--gold) repeating-linear-gradient(45deg,transparent,transparent 16px,rgba(0,0,0,.06) 16px,rgba(0,0,0,.06) 32px)}
+.card:nth-child(3n+1) .thumb.placeholder{background:var(--pop) repeating-linear-gradient(45deg,transparent,transparent 16px,rgba(0,0,0,.06) 16px,rgba(0,0,0,.06) 32px)}
+.card:nth-child(3n+2) .thumb.placeholder{background:var(--green) repeating-linear-gradient(45deg,transparent,transparent 16px,rgba(0,0,0,.06) 16px,rgba(0,0,0,.06) 32px)}
+.card .body{padding:20px;flex:1;display:flex;flex-direction:column}
+.card .price{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;align-self:flex-start;background:var(--ink);color:var(--paper);padding:4px 10px;border-radius:20px}
+.card h3{font-family:'Archivo Black',sans-serif;font-size:21px;margin:12px 0 8px;text-transform:uppercase;line-height:1}
+.card .stars{color:var(--pop);font-size:20px;letter-spacing:2px}
+.card .meta{font-family:'Space Mono',monospace;font-size:12px;margin-top:auto;padding-top:14px;opacity:.6}
+
+footer{margin:70px 0 40px;text-align:center;font-family:'Space Mono',monospace;font-size:13px;border-top:4px dashed var(--ink);padding-top:24px}
+footer a{color:inherit;font-weight:700;text-decoration:underline}
+
+/* ---- NAV ---- */
+.nav{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.nav a{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;text-decoration:none;color:var(--ink);background:#fff;border:3px solid var(--ink);padding:7px 14px;border-radius:30px;transition:transform .15s}
+.nav a:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+
+/* ---- GIVEAWAY SIGNUP ---- */
+.signup{
+  margin:48px 0;background:var(--pop);color:#fff;border:5px solid var(--ink);border-radius:28px;
+  box-shadow:10px 10px 0 var(--ink);padding:38px;text-align:center;
+}
+.signup .lab{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;background:var(--gold);color:var(--ink);display:inline-block;padding:5px 12px;border-radius:30px;margin-bottom:14px}
+.signup h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(26px,4vw,40px);line-height:1;letter-spacing:-1px}
+.signup p{font-family:'Space Mono',monospace;font-size:15px;max-width:48ch;margin:14px auto 22px}
+.signup form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:480px;margin:0 auto}
+.signup input{flex:1;min-width:220px;font-family:'Space Mono',monospace;font-size:15px;padding:14px 16px;border:4px solid var(--ink);border-radius:14px;background:var(--paper);color:var(--ink)}
+.signup button{font-family:'Space Mono',monospace;font-weight:700;font-size:15px;padding:14px 24px;border:4px solid var(--ink);border-radius:14px;background:var(--ink);color:#fff;cursor:pointer;transition:transform .15s}
+.signup button:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--gold)}
+.signup .fine{font-size:12px;opacity:.85;margin-top:14px}
+
+/* ---- SOCIAL BAR ---- */
+.social{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:34px 0}
+.social a{font-family:'Space Mono',monospace;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink);background:#fff;border:4px solid var(--ink);padding:11px 18px;border-radius:40px;transition:transform .15s}
+.social a:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--pop2)}
+
+@media(max-width:720px){
+  .hero{grid-template-columns:1fr;text-align:center}
+  .hero .lab{margin-inline:auto}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="top">
+      <h1 class="brand">TOCK<br><span>BOTTOM</span></h1>
+      <div class="badge">EVERY WATCH ≤ $50 💸</div>
+    </div>
+    <p class="tag">Cheap watches, honest takes. One review every week — every watch $50 or less, every watch given away.</p>
+    <nav class="nav">
+      <a href="index.html">Reviews</a>
+      <a href="about.html">About</a>
+      <a href="#signup">Win a Watch (soon)</a>
+    </nav>
+  </header>
+
+  <!-- FEATURED / LATEST -->
+  <section class="hero">
+    <div>
+      <span class="lab">⭐ THIS WEEK'S PICK</span>
+      <h2>Casio F-91W</h2>
+      <p>The legendary $15 digital that refuses to die. Is it actually any good, or just nostalgia? Full breakdown inside.</p>
+      <a class="cta" href="reviews/casio-f91w.html">Read the review →</a>
+    </div>
+    <div>
+      <div class="score-big">4.2</div>
+      <div class="stars-row">★★★★☆</div>
+    </div>
+  </section>
+
+  <!-- ALL REVIEWS -->
+  <h2 class="section-h">All Reviews</h2>
+  <div class="grid">
+
+    <a class="card" href="reviews/casio-f91w.html">
+      <!-- swap for: <div class="thumb"><img src="images/casio-thumb.jpg" alt="Casio F-91W"></div> -->
+      <div class="thumb placeholder">📷</div>
+      <div class="body">
+        <span class="price">$15</span>
+        <h3>Casio F-91W</h3>
+        <div class="stars">★★★★☆</div>
+        <div class="meta">WEEK 01 · DIGITAL</div>
+      </div>
+    </a>
+
+    <!-- 👇 COPY A BLOCK LIKE THIS FOR EACH NEW REVIEW (swap the thumb div for an <img> once you have a photo) -->
+    <a class="card" href="reviews/timex-weekender.html">
+      <!-- swap for: <div class="thumb"><img src="images/timex-thumb.jpg" alt="Timex Weekender"></div> -->
+      <div class="thumb placeholder">📷</div>
+      <div class="body">
+        <span class="price">$38</span>
+        <h3>Timex Weekender</h3>
+        <div class="stars">★★★★☆</div>
+        <div class="meta">WEEK 02 · ANALOG</div>
+      </div>
+    </a>
+
+    <a class="card" href="#">
+      <!-- swap for: <div class="thumb"><img src="images/your-thumb.jpg" alt="Watch name"></div> -->
+      <div class="thumb placeholder">📷</div>
+      <div class="body">
+        <span class="price">$42</span>
+        <h3>Coming Soon</h3>
+        <div class="stars">★★★☆☆</div>
+        <div class="meta">WEEK 03 · DIVER</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- GIVEAWAY (COMING SOON) — when ready, restore the email form here and point it at your provider -->
+  <section class="signup" id="signup">
+    <span class="lab">🎁 COMING SOON</span>
+    <h2>Subscribe & Win the Watch</h2>
+    <p>Soon, every watch we review will be given away to a subscriber. The email list and giveaway are still being set up — check back shortly to join.</p>
+    <p class="fine">Giveaway not yet open. Full rules will be posted before the first drawing. U.S. residents 18+, no purchase necessary.</p>
+  </section>
+
+  <!-- SOCIAL LINKS — replace # with your real profile URLs -->
+  <div class="social">
+    <a href="#" target="_blank" rel="noopener">Instagram</a>
+    <a href="#" target="_blank" rel="noopener">YouTube</a>
+    <a href="#" target="_blank" rel="noopener">TikTok</a>
+    <a href="#" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="#" target="_blank" rel="noopener">Reddit</a>
+  </div>
+
+  <footer>TOCK BOTTOM · cheap watches, honest takes · built with ☕ and skepticism · <a href="https://buymeacoffee.com/YOUR-USERNAME" target="_blank" rel="noopener">buy me a coffee</a></footer>
+</div>
+</body>
+</html>
