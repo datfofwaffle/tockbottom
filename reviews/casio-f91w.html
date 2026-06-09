@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casio F-91W Review — TOCK BOTTOM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#161616;--paper:#f4ead5;--pop:#ff4d2e;--pop2:#2962ff;--gold:#ffc83d;--green:#1fd47e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Bricolage Grotesque',sans-serif;overflow-x:hidden}
+::selection{background:var(--pop);color:#fff}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(var(--ink) 1px,transparent 1px);background-size:22px 22px;opacity:.05}
+.wrap{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:0 24px}
+
+.back{display:inline-block;font-family:'Space Mono',monospace;font-weight:700;text-decoration:none;color:var(--ink);margin:32px 0 8px;background:var(--gold);padding:8px 14px;border-radius:30px;border:3px solid var(--ink);transition:transform .15s}
+.back:hover{transform:translate(-3px,-3px);box-shadow:4px 4px 0 var(--ink)}
+
+.head{margin:18px 0 30px}
+.pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.pill{font-family:'Space Mono',monospace;font-weight:700;font-size:12px;padding:5px 12px;border-radius:30px;border:3px solid var(--ink)}
+.pill.price{background:var(--green)}
+.pill.week{background:var(--pop);color:#fff}
+.pill.type{background:#fff}
+h1{font-family:'Archivo Black',sans-serif;font-size:clamp(40px,9vw,84px);line-height:.88;text-transform:uppercase;letter-spacing:-2px}
+
+.verdict{
+  background:var(--pop2);color:#fff;border:5px solid var(--ink);border-radius:26px;
+  box-shadow:9px 9px 0 var(--ink);padding:30px;margin:30px 0;display:flex;gap:26px;align-items:center;flex-wrap:wrap;
+}
+.verdict .num{font-family:'Archivo Black',sans-serif;font-size:96px;line-height:.8}
+.verdict .vstars{font-size:30px;color:var(--gold);letter-spacing:4px}
+.verdict .vtxt{flex:1;min-width:200px}
+.verdict .vtxt b{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:20px;display:block;margin-bottom:6px}
+
+/* scorecard */
+.card-h{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;margin:42px 0 18px;display:flex;align-items:center;gap:12px}
+.card-h::after{content:"";flex:1;height:4px;background:var(--ink)}
+.score{margin:14px 0;border:4px solid var(--ink);border-radius:18px;padding:16px 18px;background:#fff}
+.score .r{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.score .cat{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:16px}
+.score .st{color:var(--pop);font-size:22px;letter-spacing:2px;white-space:nowrap}
+.score .note{font-family:'Space Mono',monospace;font-size:13px;margin-top:8px;opacity:.8}
+
+.body-txt{font-size:18px;line-height:1.6;margin:16px 0}
+.body-txt h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:24px;margin:34px 0 10px}
+
+/* ---- PHOTOS ---- */
+/* hero shot */
+.hero-photo{
+  width:100%;height:340px;object-fit:cover;display:block;
+  border:5px solid var(--ink);border-radius:24px;box-shadow:9px 9px 0 var(--ink);margin:6px 0 14px;
+}
+/* fallback look when no image is set yet */
+.hero-photo.placeholder,.gal-item.placeholder{
+  background:var(--gold) repeating-linear-gradient(45deg,transparent,transparent 18px,rgba(0,0,0,.06) 18px,rgba(0,0,0,.06) 36px);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-weight:700;color:var(--ink);text-align:center;font-size:14px;padding:10px;
+}
+/* gallery strip */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.gal-item{
+  width:100%;aspect-ratio:1/1;object-fit:cover;display:block;
+  border:4px solid var(--ink);border-radius:16px;transition:transform .15s;
+}
+.gal-item:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+
+/* ---- BUY ME A COFFEE ---- */
+.coffee{
+  margin:48px 0 10px;background:var(--gold);border:5px solid var(--ink);border-radius:24px;
+  box-shadow:8px 8px 0 var(--ink);padding:28px;text-align:center;
+}
+.coffee b{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;display:block;margin-bottom:6px}
+.coffee p{font-family:'Space Mono',monospace;font-size:14px;margin-bottom:18px}
+.coffee a{
+  display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;
+  font-family:'Space Mono',monospace;font-weight:700;font-size:16px;padding:14px 26px;border-radius:40px;transition:transform .15s;
+}
+.coffee a:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--pop)}
+footer a{color:inherit;font-weight:700;text-decoration:underline}
+
+footer{margin:70px 0 40px;text-align:center;font-family:'Space Mono',monospace;font-size:13px;border-top:4px dashed var(--ink);padding-top:24px}
+@media(max-width:560px){.verdict .num{font-size:70px}.hero-photo{height:220px}.gallery{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← ALL REVIEWS</a>
+  <a class="back" href="../about.html">ABOUT</a>
+  <a class="back" href="../index.html#signup">WIN A WATCH (SOON)</a>
+
+  <div class="head">
+    <div class="pillrow">
+      <span class="pill week">WEEK 01</span>
+      <span class="pill price">$15</span>
+      <span class="pill type">DIGITAL</span>
+    </div>
+    <h1>Casio<br>F-91W</h1>
+  </div>
+
+  <!-- HERO PHOTO — swap the <div> below for: <img class="hero-photo" src="images/casio-hero.jpg" alt="Casio F-91W"> -->
+  <div class="hero-photo placeholder">📷 HERO PHOTO GOES HERE</div>
+
+  <!-- OVERALL VERDICT -->
+  <div class="verdict">
+    <div>
+      <div class="num">4.2</div>
+      <div class="vstars">★★★★☆</div>
+    </div>
+    <div class="vtxt">
+      <b>The Verdict</b>
+      A pocket-money icon. Won't win beauty contests, won't ever stop ticking. The default answer to "cheap watch that just works."
+    </div>
+  </div>
+
+  <!-- GALLERY — swap each <div> for: <img class="gal-item" src="images/casio-1.jpg" alt="detail"> -->
+  <h2 class="card-h">Gallery</h2>
+  <div class="gallery">
+    <div class="gal-item placeholder">📷 PHOTO 1</div>
+    <div class="gal-item placeholder">📷 PHOTO 2</div>
+    <div class="gal-item placeholder">📷 PHOTO 3</div>
+  </div>
+
+  <!-- SCORECARD -->
+  <h2 class="card-h">Scorecard</h2>
+
+  <div class="score">
+    <div class="r"><span class="cat">Look</span><span class="st">★★★☆☆</span></div>
+    <div class="note">Plain and a little toy-like, but the retro charm is real.</div>
+  </div>
+  <div class="score">
+    <div class="r"><span class="cat">Feel</span><span class="st">★★★☆☆</span></div>
+    <div class="note">Featherlight resin. Comfy, but feels every bit as cheap as it is.</div>
+  </div>
+  <div class="score">
+    <div class="r"><span class="cat">Accuracy</span><span class="st">★★★★★</span></div>
+    <div class="note">±30 sec/month. Genuinely excellent at this price.</div>
+  </div>
+  <div class="score">
+    <div class="r"><span class="cat">Water Resistance</span><span class="st">★★★☆☆</span></div>
+    <div class="note">Splash-proof only. Fine in rain, don't go swimming.</div>
+  </div>
+  <div class="score">
+    <div class="r"><span class="cat">Value</span><span class="st">★★★★★</span></div>
+    <div class="note">$15 for a watch that lasts years. Unbeatable.</div>
+  </div>
+
+  <!-- WRITE-UP -->
+  <h2 class="card-h">The Full Review</h2>
+  <div class="body-txt">
+    <p>Replace this with your write-up. Talk about how it wears day to day, the strap, the backlight, battery life — whatever stood out.</p>
+    <h2>The Good</h2>
+    <p>What you loved.</p>
+    <h2>The Bad</h2>
+    <p>What annoyed you.</p>
+    <h2>Should You Buy It?</h2>
+    <p>Your final take.</p>
+  </div>
+
+  <!-- BUY ME A COFFEE — replace the URL below with your real link -->
+  <div class="coffee">
+    <b>☕ Enjoyed this review?</b>
+    <p>Tock Bottom is free and reader-supported. Buy me a coffee to fund the next cheap watch.</p>
+    <a href="https://buymeacoffee.com/YOUR-USERNAME" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+  </div>
+
+  <footer>TOCK BOTTOM · cheap watches, honest takes · <a href="https://buymeacoffee.com/YOUR-USERNAME" target="_blank" rel="noopener">buy me a coffee ☕</a></footer>
+</div>
+</body>
+</html>
